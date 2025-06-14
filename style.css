@@ -1,0 +1,172 @@
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+:root {
+  --white: #fff;
+  --black: #000000;
+  --gray: #c4c4c4;
+  --lightGray: #e3e3e3;
+  --puprle: #e27beb;
+  --red: #ff0000;
+  --blue: #65cdf9;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("RobotoRegular"), url("fonts/RobotoRegular.woff2") format("woff2"),
+    url("fonts/RobotoRegular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  position: relative;
+  width: 100%;
+  min-width: 100%;
+  font-family: sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+  background-color: var(--lightGray);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.container {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.app {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 62px 84px 72px 74px;
+  max-width: 661px;
+  background-color: var(--gray);
+}
+
+.app__input {
+  box-sizing: border-box;
+  padding-top: 5px;
+  padding-left: 13px;
+  width: 500px;
+  height: 61px;
+  font-size: 48px;
+  border: none;
+}
+
+.app__input:focus-visible {
+  outline: none;
+}
+
+.app__suggestion {
+  padding-left: 13px;
+  padding-bottom: 9px;
+  font-size: 30px;
+  background-color: var(--lightGray);
+  border: 2px solid var(--black);
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.app__suggestion:hover {
+  background-color: var(--blue);
+}
+
+.app__card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 8px 34px 8px 16px;
+  width: 503px;
+  background-color: var(--puprle);
+  font-size: 24px;
+  border: 1px solid var(--black);
+  white-space: pre-wrap;
+}
+
+.app__card:first-child {
+  margin-top: 45px;
+}
+
+.app__btn::before {
+  position: absolute;
+  content: "";
+  width: 58px;
+  height: 4px;
+  right: 26px;
+  background-color: var(--red);
+  rotate: 45deg;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.app__btn:hover:before {
+  background-color: var(--white);
+}
+
+.app__btn:focus-visible:before {
+  background-color: var(--white);
+  outline: none;
+}
+
+.app__btn {
+  margin-left: auto;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+}
+
+.app__btn:focus-visible {
+  outline: none;
+}
+
+.app__btn::after {
+  position: absolute;
+  content: "";
+  width: 58px;
+  height: 4px;
+  right: 26px;
+  background-color: var(--red);
+  rotate: -45deg;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.app__btn:hover:after {
+  background-color: var(--white);
+}
+
+.app__btn:focus-visible:after {
+  background-color: var(--white);
+  outline: none;
+}
